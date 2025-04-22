@@ -1,0 +1,133 @@
+.contact-us {
+  --verticalPudding: 60px;
+
+  background-color: var(--color-gray);
+  border-radius: var(--border-radius-large);
+  padding: var(--verticalPudding) 80px;
+
+  overflow: hidden;
+  position: relative;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    background-color: inherit;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    max-width: 555px;
+
+    @include tablet {
+      max-width: 100%;
+      row-gap: 40px;
+
+      background-color: var(--color-gray);
+      border-radius: var(--border-radius-large);
+      padding: 40px 30px 50px;
+    }
+  }
+
+  &__radio {
+    &-list {
+      display: flex;
+      column-gap: 35px;
+
+      @include tablet {
+        max-width: 100%;
+        justify-content: space-around;
+      }
+    }
+
+    &-button {
+      @include hover {
+        opacity: 0.6;
+        transition-duration: var(--transition-duration);
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        column-gap: 14px;
+
+        &::before {
+          content: "";
+
+          @include square(28px);
+
+          border-radius: 50%;
+          box-sizing: border-box;
+          background-color: var(--color-light);
+          transition-duration: var(--transition-duration);
+          outline: var(--border);
+          border: 5px solid var(--color-light);
+        }
+      }
+
+      input:checked + span::before {
+        background-color: var(--color-accent);
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    z-index: 20;
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+  }
+
+  &__input {
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 18px 30px;
+    font-size: 18px;
+
+    @include tablet {
+      padding: 18px 20px;
+    }
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+
+    &::placeholder {
+      color: var(--color-gray-alt);
+    }
+
+    &--textarea {
+      min-height: 190px;
+      resize: none;
+    }
+  }
+
+  &__button {
+    z-index: 20;
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    top: var(--verticalPudding);
+    bottom: var(--verticalPudding);
+    width: 25%;
+    z-index: 10;
+    background-image: url(../../img/contact-us.svg);
+    background-repeat: no-repeat;
+  }
+}

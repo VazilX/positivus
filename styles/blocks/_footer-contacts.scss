@@ -1,0 +1,39 @@
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 27px;
+  max-width: 332px;
+
+  @include mobile {
+    align-items: center;
+  }
+
+  &__title {
+    width: fit-content;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 20px;
+
+    @include mobile {
+      align-items: center;
+      row-gap: 37px;
+    }
+  }
+
+  &__link {
+    color: var(--color-light);
+
+    @include hover {
+      color: var(--color-accent);
+    }
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+}

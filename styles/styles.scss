@@ -1,0 +1,9 @@
+@import "normalize", "fonts", "mixins", "media", "variables", "globals", "utils";
+
+@import "blocks/burger-button", "blocks/button", "blocks/grid", "./blocks/logo",
+  "blocks/cross-button", "blocks/hero", "blocks/sections", "blocks/header",
+  "blocks/mobile-overlay", "blocks/services", "blocks/service-card",
+  "blocks/banner", "blocks/puddle-bg", "blocks/studies", "blocks/process",
+  "blocks/team", "blocks/team-card", "blocks/reviews", "blocks/review-card",
+  "blocks/pagination", "blocks/contact-us", "blocks/footer",
+  "blocks/social-media", "blocks/footer-contacts", "blocks/footer-form";

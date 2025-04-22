@@ -1,0 +1,42 @@
+.social-media {
+  &__list {
+    display: flex;
+    column-gap: 5px;
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__link {
+    @include flex-center;
+    @include square(40px);
+
+    background-color: var(--color-light);
+    border-radius: 50%;
+    padding: 5px;
+    background-clip: content-box;
+
+    @include hover {
+      background-color: var(--color-accent);
+    }
+
+    @include tablet {
+      transform: scale(0.75);
+    }
+
+    @include mobile {
+      transform: scale(1);
+    }
+
+    &--revers {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+
+      @include hover {
+        color: var(--color-accent);
+        background-color: var(--color-dark);
+      }
+    }
+  }
+}
